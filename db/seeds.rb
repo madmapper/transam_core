@@ -306,5 +306,3 @@ unless SystemConfig.transam_module_loaded? :transit
 end
 
 require_relative File.join("seeds", 'asset_query_seeds.rb')
-
-

@@ -94,13 +94,17 @@ class DispositionUpdatesFileHandler < AbstractFileHandler
           # If all the validations have passed, type the asset
           asset = Rails.application.config.asset_base_class_name.constantize.get_typed_asset(asset)
 
+          if asset.class.to_s.include? 'Vehicle'
+            idx = -4
+          end
+
           #---------------------------------------------------------------------
           # Disposition
           #---------------------------------------------------------------------
 
           add_processing_message(2, 'success', 'Processing Disposition Report')
           loader = DispositionUpdateEventLoader.new
-          loader.process(asset, cells[idx..idx+3])
+          loader.process(asset, cells[idx..-1])
           if loader.errors?
             row_errored = true
             loader.errors.each { |e| add_processing_message(3, 'warning', e)}
