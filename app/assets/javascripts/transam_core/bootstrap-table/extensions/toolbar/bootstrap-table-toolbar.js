@@ -6,7 +6,7 @@
  * @update zhixin wen <wenzhixin2010@gmail.com>
  */
 
-($ => {
+(function(){
   const Utils = $.fn.bootstrapTable.utils
 
   const bootstrap = {

@@ -6,7 +6,7 @@
  * @update: zhixin wen <wenzhixin2010@gmail.com>
  */
 
-($ => {
+(function(){
   /*
      * function: 获取浏览器地址栏中的指定参数.
      * key: 参数名
