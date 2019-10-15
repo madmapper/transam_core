@@ -4,7 +4,9 @@
  * @update zhixin wen <wenzhixin2010@gmail.com>
  */
 
-(function(){
+(function ($) {
+  'use_strict';
+
   const UtilsCookie = {
     cookieIds: {
       sortOrder: 'bs.table.sortOrder',

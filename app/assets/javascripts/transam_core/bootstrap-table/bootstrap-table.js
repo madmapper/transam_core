@@ -4,7 +4,8 @@
  * https://github.com/wenzhixin/bootstrap-table/
  */
 
-(function(){
+(function ($) {
+  'use_strict';
   // TOOLS DEFINITION
   // ======================
 

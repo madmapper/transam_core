@@ -4,7 +4,9 @@
  * @version: v2.2.0
  */
 
-(function(){
+(function ($) {
+  'use_strict';
+
   const Utils = $.fn.bootstrapTable.utils
   const UtilsFilterControl = {
     getOptionsFromSelectControl (selectControl) {
