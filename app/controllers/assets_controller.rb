@@ -178,11 +178,11 @@ class AssetsController < AssetAwareController
       sorting_string = ""
 
       multi_sort.each { |x|
-        sorting_string = sorting_string + "#{x[0]}: :#{x[1]}"
+        sorting_string = sorting_string + "#{x[0]}: :#{x[1]}" if x.all?
       }
 
     else
-      sorting_string = "#{params[:sort]} #{params[:order]}"
+      sorting_string = "#{params[:sort]} #{params[:order]}" if [params[:sort], params[:order]].all?
     end
 
     cache_list(@assets.order(sorting_string), INDEX_KEY_LIST_VAR)
@@ -310,7 +310,7 @@ class AssetsController < AssetAwareController
     # end
 
     respond_to do |format|
-      if @asset.update_attributes(new_form_params(@asset))
+      if @asset.update!(new_form_params(@asset))
 
         # If the asset was successfully updated, schedule update the condition and disposition asynchronously
         #Delayed::Job.enqueue AssetUpdateJob.new(@asset.asset.object_key), :priority => 0
