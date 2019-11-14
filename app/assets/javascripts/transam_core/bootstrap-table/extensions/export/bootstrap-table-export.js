@@ -3,7 +3,7 @@
  * extensions: https://github.com/hhurz/tableExport.jquery.plugin
  */
 
-(function(){
+($ => {
   const Utils = $.fn.bootstrapTable.utils
 
   const bootstrap = {

@@ -4,7 +4,7 @@
  * @update: zhixin wen <wenzhixin2010@gmail.com>
  */
 
-(function(){
+($ => {
   const Utils = $.fn.bootstrapTable.utils
 
   $.extend($.fn.bootstrapTable.defaults, {
