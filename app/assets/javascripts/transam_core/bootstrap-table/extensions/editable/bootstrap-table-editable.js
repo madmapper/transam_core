@@ -3,9 +3,7 @@
  * extensions: https://github.com/vitalets/x-editable
  */
 
-(function ($) {
-  'use_strict';
-
+(function(){
   const Utils = $.fn.bootstrapTable.utils
 
   $.extend($.fn.bootstrapTable.defaults, {

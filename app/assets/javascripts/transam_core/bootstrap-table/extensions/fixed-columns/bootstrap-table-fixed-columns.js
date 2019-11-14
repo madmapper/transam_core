@@ -2,9 +2,7 @@
  * @author zhixin wen <wenzhixin2010@gmail.com>
  */
 
-(function ($) {
-  'use_strict';
-
+(function(){
   $.extend($.fn.bootstrapTable.defaults, {
     fixedColumns: false,
     fixedNumber: 1
